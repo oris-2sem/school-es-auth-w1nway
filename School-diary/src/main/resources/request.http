@@ -1,0 +1,82 @@
+POST localhost:8080/parents
+Content-Type: application/json
+
+{
+   "profile": "fsadfsdaf"
+}
+
+########
+POST localhost:8080/teachers
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW1lc0BtYWlsLnJ1Iiwicm9sZSI6IlNUVURFTlQiLCJpc3MiOiIvYXV0aC90b2tlbiIsImV4cCI6MTY4NjI0NjMyM30.Mx_2YRvahpHOZ3z6LjHXRP9N5k7fWNiHhMDurJjclB8
+Content-Type: application/json
+
+{
+  "firstName": "dsfaskjhkjjfd",
+  "profile": "fsadfsdaf",
+  "lastName": "dsfsdafsdaf"
+}
+
+#####
+POST localhost:8080/classes?teacher-id=2
+Content-Type: application/json
+
+{
+  "classLetter": "fsadfsdaf"
+}
+#####
+POST localhost:8080/classes?teacher-id=7
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW1lc0BtYWlsLnJ1Iiwicm9sZSI6IlNUVURFTlQiLCJpc3MiOiIvYXV0aC90b2tlbiIsImV4cCI6MTY4NjI0NjMyM30.Mx_2YRvahpHOZ3z6LjHXRP9N5k7fWNiHhMDurJjclB8
+Content-Type: application/json
+
+{
+  "classLetter": "fsadfsdaf"
+}
+#####
+POST localhost:8080/timetable?teacher-id=7&class-id=4
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW1lc0BtYWlsLnJ1Iiwicm9sZSI6IlNUVURFTlQiLCJpc3MiOiIvYXV0aC90b2tlbiIsImV4cCI6MTY4NjI0NjMyM30.Mx_2YRvahpHOZ3z6LjHXRP9N5k7fWNiHhMDurJjclB8
+Content-Type: application/json
+
+{
+  "room": "101"
+}
+#####
+POST localhost:8080/lessons?timetable-id=1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW1lc0BtYWlsLnJ1Iiwicm9sZSI6IlNUVURFTlQiLCJpc3MiOiIvYXV0aC90b2tlbiIsImV4cCI6MTY4NjI0NjMyM30.Mx_2YRvahpHOZ3z6LjHXRP9N5k7fWNiHhMDurJjclB8
+Content-Type: application/json
+
+{
+  "room": "101"
+}
+####
+POST localhost:8080/lessons?timetable-id=1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW1lc0BtYWlsLnJ1Iiwicm9sZSI6IlNUVURFTlQiLCJpc3MiOiIvYXV0aC90b2tlbiIsImV4cCI6MTY4NjI0NjgwNn0.C8q1GTdUoiTmSFbvDQpjveueV9idOX0_JWeKh7qC5as
+Content-Type: application/json
+
+{
+  "subject": "fsadfsdaf",
+  "theme": "sdfdsaf"
+}
+###
+DELETE localhost:8080/classes/1
+
+###
+
+POST http://localhost:8080/auth/token
+Content-Type: application/x-www-form-urlencoded
+
+email=james@mail.ru&password=123
+
+####
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{ "firstName": "dafaf",
+  "lastName": "dfsadfas",
+  "email": "james@mail.com",
+  "password": "123",
+  "isTeacher": true
+}
+
+
+
+
